@@ -3,9 +3,6 @@
 // para carregar:
 //  - A lista de filmes
 //  - A introdução de cada filme, quando ele for clicado
-$.get( "http://swapi.co/api/films/", function( data ) {
-    console.log(data);
-});
 if(localStorage.getItem("episode") == null){
     $.get( "http://swapi.co/api/films/4", function( data ) {
         localStorage.setItem("episode", "Episode I");
