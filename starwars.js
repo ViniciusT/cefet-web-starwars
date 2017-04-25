@@ -97,3 +97,15 @@ $( "#ep6" ).click(function() {
         $( "#text" ).text(data.opening_crawl);
     });
 });
+$( "#ep7" ).click(function() {
+    $( "#episode" ).text('');
+    $( "#title" ).text('');
+    $( "#text" ).text('');
+    $.get( "http://swapi.co/api/films/7", function( data ) {
+        localStorage.setItem("episode", "Episode VII");
+        localStorage.setItem("film", 7);
+        $( "#episode" ).text('Episode VII');
+        $( "#title" ).text(data.title);
+        $( "#text" ).text(data.opening_crawl);
+    });
+});
